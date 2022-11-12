@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Digimon, DigimonName, Level } from "../models/Digimon";
 import { digimonList, getDigimon, getSpecialDigimonInfo } from "../models/DigimonList";
-import Table from 'react-bootstrap/Table';
+import { Table, Alert, Button, Form }  from 'react-bootstrap';
 import styled from "styled-components";
 
 const StyledTable = styled(Table)`
@@ -9,14 +9,29 @@ const StyledTable = styled(Table)`
 `;
 // TODO: Allow user to input a list that they've already digivolved
 
+const StyledSelect = styled(Form.Select)`
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+`;
+
+const StyledButton = styled(Button)`
+    margin-top: -5px;
+    margin-left: 10px;
+`;
+
+const bonusDigimonEnabled = true; // TODO: make this togglable
+
 export default function DigiSlotMachine() {
     const [rolledDigimon, setRolledDigimon] = useState<Digimon>();
     const [currentDigimon, setCurrentDigimon] = useState<Digimon>(getDigimon(DigimonName.Agumon)!);
     const [bonusText, setBonusText] = useState<Array<string>>([]);
+    const [showBonusDigimonText, setShowBonusDigimonText] = useState(false);
 
     function rollDigimon(currentDigimon: Digimon) {
         // Clear the bonus text
         setBonusText([]);
+        setShowBonusDigimonText(false);
 
         // Digimon are potentials if they have NO digimonBonus
         // OR their digimonBonus matches the currentRookie
@@ -29,7 +44,8 @@ export default function DigiSlotMachine() {
         let bonusTxt = [];
         // If the rolled digimon has special bonus conditions, let the user know
         if (randomDigi.digimonBonus === currentDigimon.name) {
-            bonusTxt.push("There's a cheeky way to get this digivolution. Meet the bonus stat requirements. Check the stats.");
+            bonusTxt.push();
+            setShowBonusDigimonText(true);
         }
         
         // If the rolled digimon is a "special" digimon, let them know how to evolve into it
@@ -41,22 +57,26 @@ export default function DigiSlotMachine() {
         // Set the information for the FE
         setBonusText(bonusTxt);
         setRolledDigimon(randomDigi);
+
+        console.log(`The rolled digimon was ${randomDigi.name}`);
     }
 
     return <>
         <p>Your current Digimon: </p>
-        <select name="evolutions" value={currentDigimon.name} onChange={e => setCurrentDigimon(getDigimon(e.target.value as unknown as DigimonName))}>
+        <StyledSelect name="evolutions" value={currentDigimon.name} onChange={(e: any) => setCurrentDigimon(getDigimon(e.target.value as unknown as DigimonName))}>
             {digimonList.map(digi => (
                 <option key={digi.name} value={digi.name}>{Level[digi.level]} - {digi.name}</option>
             ))}
-        </select>
-        <button onClick={() => rollDigimon(currentDigimon)}>Roll!</button>
-        <p>Here's the targets for your secret evolution!:</p>
-        <p>{bonusText}</p>
+        </StyledSelect>
+        <StyledButton variant="primary" onClick={() => rollDigimon(currentDigimon)}>Roll!</StyledButton> 
+        {bonusDigimonEnabled && showBonusDigimonText && (
+            <Alert variant="info">
+                <p>Since you're trying to evolve a {currentDigimon.name}, your digimon gets a free bonus point towards this secret digivolution!</p>
+            </Alert>
+        )}
         <StyledTable striped bordered hover>
             <tbody>
-                <tr><th style={{ width: '30%' }}>Name</th><td style={{ width: '70%' }}>{rolledDigimon?.name || '-'}</td></tr>
-                <tr><th>Level</th><td>{Level[rolledDigimon?.level!] || '-'}</td></tr>
+                <tr><th style={{ width: '30%' }}>Level</th><td style={{ width: '70%' }}>{Level[rolledDigimon?.level!] || '-'}</td></tr>
                 <tr><th>HP</th><td>{rolledDigimon?.evolutionRequirements.hp || '-'}</td></tr>
                 <tr><th>MP</th><td>{rolledDigimon?.evolutionRequirements.mp || '-'}</td></tr>
                 <tr><th>OFFENSE</th><td>{rolledDigimon?.evolutionRequirements.offense || '-'}</td></tr>
@@ -71,10 +91,11 @@ export default function DigiSlotMachine() {
                 <tr><th>TECHS*</th><td>{rolledDigimon?.evolutionRequirements.techs || '-'}</td></tr>
                 <tr><th>MINIMUM CARE MISTAKES(?)</th><td>{(rolledDigimon?.evolutionRequirements.minCare && 'Y') || "N"}</td></tr>
                 <tr><th>MINIMUM BATTLES</th><td>{(rolledDigimon?.evolutionRequirements.minBattles && 'Y') || "N"}</td></tr>
-                <tr><th>BONUS DIGIMON</th><td>{rolledDigimon?.digimonBonus || "N/A"}</td></tr>
+                <tr><th>DIGIMON BONUS</th><td>{rolledDigimon?.digimonBonus || "N/A"}</td></tr>
             </tbody>
         </StyledTable>
-        <p>Note: Bonus condition can substitute one of three main required conditions (Care Mistake, Weight, Parameters) to Digivolve. requirements (HP MP OFF DEF SPEED BRAINS) is worth 1 point. CARE ERR is worth 1 point. WEIGHT is worth 1 point. Fulfilling any *bonus* condition is worth 1 point, but fulfilling multiple bonuses is still only worth 1 point, so just worry about filling any one bonus condition.</p>
+        {bonusText.length > 0 && <><p>Here's the targets for your secret evolution!:</p><Alert variant="info">{bonusText}</Alert></>}
+        <p>Note: Bonus condition can substitute one of three main required conditions (Care Mistake, Weight, Parameters) to Digivolve. requirements (HP MP OFF DEF SPEED BRAINS) is worth1 point. CARE ERR is worth 1 point. WEIGHT is worth 1 point. Fulfilling any *bonus* condition is worth 1 point, but fulfilling multiple bonuses is still only worth 1 point, so just worry about filling any one bonus condition.</p>
         <a href="https://pastebin.com/uWKMF3ck">More here...</a>
     </>;
 }
