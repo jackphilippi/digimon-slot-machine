@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Overpass:wght@300&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  color: #0019D6;
+}
+
+a, a:visited, a:hover {
+  color: #0019D6;
+}
+
+th {
+  text-align: left;
+}
