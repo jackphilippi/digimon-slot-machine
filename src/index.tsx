@@ -4,8 +4,6 @@ import DigiSlotMachine from './components/DigiSlotMachine';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-dotenv.config();
-
 ReactDOM.render(
   <React.StrictMode>
     <div className="App">
