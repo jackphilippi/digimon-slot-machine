@@ -1,4 +1,3 @@
-import * as dotenv from 'dotenv';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DigiSlotMachine from './components/DigiSlotMachine';
