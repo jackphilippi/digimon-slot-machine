@@ -455,17 +455,17 @@ export function getDigimon(dn: DigimonName) {
 export const getSpecialDigimonInfo = (dn: DigimonName) => {
     switch(dn) {
         case DigimonName.Devimon:
-            return "Lose a battle with your Angemon while having <50% discipline and you'll have a chance to evolve into this digimon.";
+            return "Lose a battle with your Angemon while having less than 50% discipline and you'll have a chance to evolve into this digimon.";
         case DigimonName.Numemon:
-            return "Make sure you have no other evolution enabled and you'll evolve into this digimon after 96h on the Rookie level.";
+            return "Make sure you don't meet the requirements for any other digimon and you'll evolve into this digimon after 96h on the Rookie level.";
         case DigimonName.Sukamon:
-            return "Fill your virus bar by pooping on the ground";
+            return "Fill your virus bar by allowing your digimon to poop on the ground.";
         case DigimonName.Nanimon:
             return "Bring happiness and discipline to 0 and scold your Digimon. The easiest way to do so is praising/scolding and then reducing the last bit of discipline by overfeeding. The fly/flower condition will increase your happiness and prevents you from getting this evolution!";
         case DigimonName.Vademon:
-            return "Make sure you have no other evolution enabled and you can evolve into this digimon when praising/scolding your Digimon after 240h on the Champion level.";
+            return "Make sure you don't meet the requirements for any other digimon and you can evolve into this digimon when praising/scolding your Digimon after 240h on the Champion level.";
         case DigimonName.Kunemon:
-            return "Sleep in Kunemon's bed and you'll have a chance to evolve into this digimon."  
+            return `Sleep in the "Kunemon's" Bed area and you'll have a chance to evolve into this digimon.`  
         default:
             return false;
     }

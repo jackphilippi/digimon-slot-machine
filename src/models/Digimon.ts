@@ -8,7 +8,7 @@ export enum Level {
     Ultimate
 }
 
-export const enum DigimonName {
+export enum DigimonName {
     Botamon = "Botamon",
     Poyomon = "Poyomon",
     Punimon = "Punimon",
