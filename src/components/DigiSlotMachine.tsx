@@ -152,6 +152,7 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
 
                 <FormCheck 
                     type="switch"
+                    defaultChecked={optShowSpecialDigimon}
                     id="specials-switch"
                     label="Show special digimon evolutions (eg. Numemon)"
                     value={optShowSpecialDigimon}
@@ -159,6 +160,7 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                 />
                 <FormCheck 
                     type="switch"
+                    defaultChecked={optShowOmitTags}
                     id="omit-switch"
                     label="Exclude one or more digimon from the results"
                     value={optShowOmitTags}
@@ -174,6 +176,7 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                 </>}
                 <FormCheck 
                     type="switch"
+                    defaultChecked={optShowInfoText}
                     id="help-switch"
                     label="Show info text"
                     value={optShowInfoText}
@@ -182,6 +185,7 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                 <hr/>
                 <FormCheck 
                     type="switch"
+                    defaultChecked={optShowSpoilers}
                     id="spoilers-switch"
                     label="Show target digimon name details (spoilers!)"
                     value={optShowSpoilers}
