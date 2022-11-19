@@ -76,7 +76,7 @@ export class Digimon {
     constructor(
         public readonly name: DigimonName,
         public readonly level: Level,
-        public readonly evolutionRequirements: EvolutionRequirements,
+        public readonly req: EvolutionRequirements,
         public readonly evolutionPath: Array<DigimonName>,
         public readonly digimonBonus?: DigimonName,
         ) {

@@ -6,28 +6,28 @@ export const digimonList = [
     new Digimon(
         DigimonName.Botamon,
         Level.Fresh,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Koromon, DigimonName.Sukamon]
     ),
     // Poyomon
     new Digimon(
         DigimonName.Poyomon,
         Level.Fresh,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Tokomon, DigimonName.Sukamon]
     ),
     // Punimon
     new Digimon(
         DigimonName.Punimon,
         Level.Fresh,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Tsunomon, DigimonName.Sukamon]
     ),
     // Yuramon
     new Digimon(
         DigimonName.Yuramon,
         Level.Fresh,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Tanemon, DigimonName.Sukamon]
     ),
 
@@ -35,28 +35,28 @@ export const digimonList = [
     new Digimon(
         DigimonName.Koromon,
         Level.InTraining,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Agumon, DigimonName.Gabumon, DigimonName.Kunemon, DigimonName.Sukamon]
     ),
     // Tanemon
     new Digimon(
         DigimonName.Tanemon,
         Level.InTraining,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Palmon, DigimonName.Betamon, DigimonName.Kunemon, DigimonName.Sukamon]
     ),
     // Tokomon
     new Digimon(
         DigimonName.Tokomon,
         Level.InTraining,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Patamon, DigimonName.Biyomon, DigimonName.Kunemon, DigimonName.Sukamon]
     ),
     // Tsunomon
     new Digimon(
         DigimonName.Tsunomon,
         Level.InTraining,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Elecmon, DigimonName.Penguinmon, DigimonName.Kunemon, DigimonName.Sukamon]
     ),
     
@@ -64,14 +64,14 @@ export const digimonList = [
     new Digimon(
         DigimonName.Agumon,
         Level.Rookie,
-        new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 3, 20, 0, 50, -1, 28, false, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 3, 20, 0, 50, 0, 28, false, false), 
         [DigimonName.Greymon, DigimonName.Meramon, DigimonName.Birdramon, DigimonName.Centarumon, DigimonName.Monochromon, DigimonName.Tyrannomon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon]
     ),
     // Betamon
     new Digimon(
         DigimonName.Betamon,
         Level.Rookie,
-        new EvolutionRequirements(10, 10, 0, 1, 0, 0, 0, 15, 0, 0, -2, 0, false, false),
+        new EvolutionRequirements(10, 10, 0, 1, 0, 0, 0, 15, 0, 0, 0, 0, false, false),
         [DigimonName.Seadramon, DigimonName.Whamon, DigimonName.Shellmon, DigimonName.Coelamon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Tanemon, 
     ),
@@ -79,7 +79,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Biyomon,
         Level.Rookie,
-        new EvolutionRequirements(0, 10, 0, 1, 1, 0, 0, 15, 0, 0, -2, 0, false, false), 
+        new EvolutionRequirements(0, 10, 0, 1, 1, 0, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Birdramon, DigimonName.Airdramon, DigimonName.Kokatorimon, DigimonName.Unimon, DigimonName.Kabuterimon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Tokomon
     ),
@@ -87,7 +87,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Elecmon,
         Level.Rookie,
-        new EvolutionRequirements(10, 0, 1, 0, 1, 0, 0, 15, 0, 0, -2, 0, false, false), 
+        new EvolutionRequirements(10, 0, 1, 0, 1, 0, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Leomon, DigimonName.Angemon, DigimonName.Bakemon, DigimonName.Kokatorimon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Tsunomon
     ),
@@ -95,7 +95,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Gabumon,
         Level.Rookie,
-        new EvolutionRequirements(0, 0, 0, 1, 1, 1, 0, 15, 0, 0, -2, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 1, 1, 1, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Centarumon, DigimonName.Monochromon, DigimonName.Drimogemon, DigimonName.Tyrannomon, DigimonName.Ogremon, DigimonName.Garurumon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Koromon
     ),
@@ -103,14 +103,14 @@ export const digimonList = [
     new Digimon(
         DigimonName.Kunemon,
         Level.Rookie,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Bakemon, DigimonName.Kabuterimon, DigimonName.Kuwagamon, DigimonName.Vegiemon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon]
     ),
     // Palmon
     new Digimon(
         DigimonName.Palmon,
         Level.Rookie,
-        new EvolutionRequirements(0, 10, 0, 0, 1, 1, 0, 15, 0, 0, -2, 0, false, false), 
+        new EvolutionRequirements(0, 10, 0, 0, 1, 1, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Kuwagamon, DigimonName.Vegiemon, DigimonName.Ninjamon, DigimonName.Whamon, DigimonName.Coelamon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Tanemon
     ),
@@ -118,7 +118,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Patamon,
         Level.Rookie,
-        new EvolutionRequirements(10, 0, 1, 0, 0, 1, 0, 15, 0, 0, -2, 0, false, false), 
+        new EvolutionRequirements(10, 0, 1, 0, 0, 1, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Drimogemon, DigimonName.Tyrannomon, DigimonName.Ogremon, DigimonName.Leomon, DigimonName.Angemon, DigimonName.Unimon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Tokomon
     ),
@@ -126,7 +126,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Penguinmon,
         Level.Rookie,
-        new EvolutionRequirements(0, 10, 0, 1, 0, 1, 0, 15, 0, 0, -2, 0, false, false), 
+        new EvolutionRequirements(0, 10, 0, 1, 0, 1, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Whamon, DigimonName.Shellmon, DigimonName.Garurumon, DigimonName.Frigimon, DigimonName.Mojyamon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Tsunomon
     ),
@@ -134,7 +134,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Airdramon,
         Level.Champion,
-        new EvolutionRequirements(10, 10, 1, 0, 0, 0, 0, 15, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(10, 10, 1, 0, 0, 0, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Megadramon, DigimonName.Phoenixmon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Koromon
     ),
@@ -149,7 +149,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Bakemon,
         Level.Champion,
-        new EvolutionRequirements(0, 1000, 0, 0, 0, 100, 0, 20, 0, 0, -1, 35, true, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 0, 100, 0, 20, 0, 0, 0, 35, true, false), 
         [DigimonName.SkullGreymon, DigimonName.Giromon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Patamon
     ),
@@ -157,7 +157,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Birdramon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 0, 0, 100, 0, 3, 20, 0, 0, -1, 35, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 100, 0, 3, 20, 0, 0, 0, 35, false, false), 
         [DigimonName.Phoenixmon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Biyomon
     ),
@@ -165,7 +165,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Centarumon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 100, 3, 30, 60, 0, -1, 28, true, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 100, 3, 30, 60, 0, 0, 28, true, false), 
         [DigimonName.Andromon, DigimonName.Giromon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Coelamon
@@ -179,42 +179,42 @@ export const digimonList = [
     new Digimon(
         DigimonName.Devimon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.SkullGreymon, DigimonName.Megadramon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Drimogemon
     new Digimon(
         DigimonName.Drimogemon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 100, 0, 0, 0, 3, 40, 0, 50, -1, 28, false, false), 
+        new EvolutionRequirements(0, 0, 100, 0, 0, 0, 3, 40, 0, 50, 0, 28, false, false), 
         [DigimonName.MetalGreymon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Frigimon
     new Digimon(
         DigimonName.Frigimon,
         Level.Champion,
-        new EvolutionRequirements(0, 1000, 0, 0, 0, 100, 5, 30, 0, 50, -1, 28, true, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 0, 100, 5, 30, 0, 50, 0, 28, true, false), 
         [DigimonName.MetalMamemon, DigimonName.Mamemon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Garurumon
     new Digimon(
         DigimonName.Garurumon,
         Level.Champion,
-        new EvolutionRequirements(0, 1000, 0, 0, 100, 0, 1, 30, 90, 0, -1, 28, true, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 100, 0, 1, 30, 90, 0, 0, 28, true, false), 
         [DigimonName.SkullGreymon, DigimonName.MegaSeadramon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Greymon
     new Digimon(
         DigimonName.Greymon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 100, 100, 100, 100, 1, 30, 90, 0, -1, 35, true, false), 
+        new EvolutionRequirements(0, 0, 100, 100, 100, 100, 1, 30, 90, 0, 0, 35, true, false), 
         [DigimonName.MetalGreymon, DigimonName.SkullGreymon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Kabuterimon
     new Digimon(
         DigimonName.Kabuterimon,
         Level.Champion,
-        new EvolutionRequirements(1000, 1000, 100, 0, 100, 0, 1, 30, 0, 0, -1, 35, true, false), 
+        new EvolutionRequirements(1000, 1000, 100, 0, 100, 0, 1, 30, 0, 0, 0, 35, true, false), 
         [DigimonName.HKabuterimon, DigimonName.MetalMamemon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Kunemon
     ),
@@ -222,7 +222,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Kokatorimon,
         Level.Champion,
-        new EvolutionRequirements(1000, 0, 0, 0, 0, 0, 3, 30, 0, 0, -1, 28, false, false), 
+        new EvolutionRequirements(1000, 0, 0, 0, 0, 0, 3, 30, 0, 0, 0, 28, false, false), 
         [DigimonName.Phoenixmon, DigimonName.Piximon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Biyomon
     ),
@@ -230,7 +230,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Kuwagamon,
         Level.Champion,
-        new EvolutionRequirements(1000, 1000, 100, 0, 100, 0, 5, 30, 0, 0, -1, 28, false, false), 
+        new EvolutionRequirements(1000, 1000, 100, 0, 100, 0, 5, 30, 0, 0, 0, 28, false, false), 
         [DigimonName.HKabuterimon, DigimonName.Piximon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Kunemon // Requires 
     ),
@@ -266,7 +266,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Nanimon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Digitamamon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Ninjamon
@@ -280,7 +280,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Numemon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Monzaemon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Ogremon
@@ -301,7 +301,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Shellmon,
         Level.Champion,
-        new EvolutionRequirements(1000, 0, 0, 100, 0, 0, 5, 40, 0, 0, -1, 35, false, false), 
+        new EvolutionRequirements(1000, 0, 0, 100, 0, 0, 5, 40, 0, 0, 0, 35, false, false), 
         [DigimonName.HKabuterimon, DigimonName.MegaSeadramon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Betamon // Betamon requires the extra bonus stats
     ),
@@ -309,7 +309,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Sukamon,
         Level.Champion,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         [DigimonName.Etemon, DigimonName.Vademon]
     ),
     // Tyrannomon
@@ -330,14 +330,14 @@ export const digimonList = [
     new Digimon(
         DigimonName.Vegiemon,
         Level.Champion,
-        new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 5, 10, 0, 50, -1, 21, false, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 5, 10, 0, 50, 0, 21, false, false), 
         [DigimonName.Piximon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     // Whamon
     new Digimon(
         DigimonName.Whamon,
         Level.Champion,
-        new EvolutionRequirements(1000, 0, 0, 0, 0, 100, 5, 40, 60, 0, -1, 28, true, false), 
+        new EvolutionRequirements(1000, 0, 0, 0, 0, 100, 5, 40, 60, 0, 0, 28, true, false), 
         [DigimonName.MegaSeadramon, DigimonName.Mamemon, DigimonName.Vademon, DigimonName.Sukamon]
     ),
     
@@ -345,7 +345,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Andromon,
         Level.Ultimate,
-        new EvolutionRequirements(0, 1000, 0, 0, 100, 100, 1, 30, 90, 0, -1, 35, true, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 100, 100, 1, 30, 90, 0, 0, 35, true, false), 
         [DigimonName.Sukamon]
     ),
     // Digitamamon
@@ -380,7 +380,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Mamemon,
         Level.Ultimate,
-        new EvolutionRequirements(0, 0, 400, 300, 300, 400, 15, 5, 0, 90, -1, 25, false, false), 
+        new EvolutionRequirements(0, 0, 400, 300, 300, 400, 15, 5, 0, 90, 0, 25, false, false), 
         [DigimonName.Sukamon]
     ),
     // Megadramon
@@ -408,7 +408,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.MetalMamemon,
         Level.Ultimate,
-        new EvolutionRequirements(0, 0, 500, 400, 400, 400, 15, 10, 0, 95, -1, 30, true, false), 
+        new EvolutionRequirements(0, 0, 500, 400, 400, 400, 15, 10, 0, 95, 0, 30, true, false), 
         [DigimonName.Sukamon]
     ),
     // Monzaemon
@@ -429,7 +429,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Piximon,
         Level.Ultimate,
-        new EvolutionRequirements(0, 0, 300, 300, 400, 400, 15, 5, 0, 95, -1, 25, false, false), 
+        new EvolutionRequirements(0, 0, 300, 300, 400, 400, 15, 5, 0, 95, 0, 25, false, false), 
         [DigimonName.Sukamon]
     ),
     // SkullGreymon
@@ -443,7 +443,7 @@ export const digimonList = [
     new Digimon(
         DigimonName.Vademon,
         Level.Ultimate,
-        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, false, false), 
+        new EvolutionRequirements(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false), 
         []
     ),
 ]
