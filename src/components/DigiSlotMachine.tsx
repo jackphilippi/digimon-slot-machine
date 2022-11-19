@@ -15,7 +15,7 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
     const [optShowSpoilers, setOptShowSpoilers] = useState(false);
     const [showNaturalBonusText, setShowNaturalBonusText] = useState(false);
     const [optShowSpecialDigimon, setOptShowSpecialDigimon] = useState(false);
-    const [optShowInfoText, setOptShowInfoText] = useState(false);
+    const [optShowInfoText, setOptShowInfoText] = useState(true);
     
     const [showSettings, setShowSettings] = useState(true);
 

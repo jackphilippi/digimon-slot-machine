@@ -2,6 +2,7 @@
   "name": "digi-random-evolution-calc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jackphilippi.com.au/digislots",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -24,7 +25,8 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test",
-    "eject": "react-scripts --openssl-legacy-provider eject"
+    "eject": "react-scripts --openssl-legacy-provider eject",
+    "move": "rm -rf ../jackphilippi.github.io/digislots/* && cp -R build/* ../jackphilippi.github.io/digislots/"
   },
   "eslintConfig": {
     "extends": [
