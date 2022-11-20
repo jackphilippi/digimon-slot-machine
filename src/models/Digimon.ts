@@ -8,6 +8,12 @@ export enum Level {
     Ultimate
 }
 
+export enum Type {
+    Data,
+    Vaccine,
+    Virus
+}
+
 export enum DigimonName {
     Botamon = "Botamon",
     Poyomon = "Poyomon",
@@ -76,6 +82,7 @@ export class Digimon {
     constructor(
         public readonly name: DigimonName,
         public readonly level: Level,
+        public readonly type: Type,
         public readonly req: EvolutionRequirements,
         public readonly evolutionPath: Array<DigimonName>,
         public readonly digimonBonus?: DigimonName,

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Digimon, DigimonName, Level } from "../models/Digimon";
+import { Digimon, DigimonName, Level, Type } from "../models/Digimon";
 import { digimonList, getDigimon, getSpecialDigimonInfo } from "../models/DigimonList";
 import { Table, Alert, Badge }  from 'react-bootstrap';
 import { FormCheck, InfoCard, StyledButton, StyledIcon, StyledInput, StyledPane, StyledPanes, StyledSelect, StyledSettingsButton } from './DigiSlotMachine.styled';
@@ -29,6 +29,14 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
         setCareLabel('');
         setErrorText('');
         setShowNaturalBonusText(false);
+    }
+
+    function getTypeIcon(type: Type) {
+        return {
+            [Type.Data]: '💾',
+            [Type.Virus]: '🦠',
+            [Type.Vaccine]: '💊'
+        }[type];
     }
 
     function rollDigimon(currentDigimon: Digimon) {
@@ -109,9 +117,9 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
     // TODO: Hover over stats for details
     return <StyledPanes>
         <StyledPane>
-            {bonusText.length > 0 && <Alert variant="info">{bonusText}</Alert>}
             {rolledDigimon ? <>
                 <h2 id="table-heading">Target Digivolution Criteria</h2>
+                {bonusText.length > 0 && <Alert variant="info">{bonusText}</Alert>}
                 {showNaturalBonusText && (
                     <Alert variant="warning">
                         {currentDigimon.name} gets a free natural bonus point towards this digivolution!
@@ -121,6 +129,7 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                 <Table striped bordered hover>
                     <tbody>
                         <tr className='table-secondary'><th style={{ width: '30%' }}>Name</th><td style={{ width: '70%' }}>{optShowSpoilers ? <>{rolledDigimon?.name} <StyledIcon src={`./imgs/${rolledDigimon.name}.png`}/></> : '???'}</td></tr>
+                        <tr className='table-secondary'><th>Type</th><td>{optShowSpoilers ? <>{Type[rolledDigimon?.type]} {getTypeIcon(rolledDigimon.type)}</> : '???'}</td></tr>
                         <tr className='table-secondary'><th>Level</th><td>{Level[rolledDigimon.level] || '-'}</td></tr>
                         <tr className='table-info'><th>HP</th><td>{rolledDigimon.req.hp || '-'}</td></tr>
                         <tr className='table-info'><th>MP</th><td>{rolledDigimon.req.mp || '-'}</td></tr>
@@ -187,17 +196,17 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                     type="switch"
                     defaultChecked={optShowSpoilers}
                     id="spoilers-switch"
-                    label="Show target digimon name details (spoilers!)"
+                    label="Show target digimon name and type (spoilers!)"
                     value={optShowSpoilers}
                     onClick={() => setOptShowSpoilers(prev => !prev)}
                 />
             </Alert>}
             {optShowInfoText && <InfoCard variant="secondary" body>
                 <h2>What?</h2>
-                <p>This tool randomly selects a digimon for you to try and digivolve into, but doesn't tell you what that digimon will be.</p>
+                <p>This tool randomly selects a valid digimon evolution for you to digivolve your digimon into, but doesn't tell you what that digimon will be.</p>
                 <h2>Why?</h2>
                 <p>Digimon World 1 is an infamously challenging game which doesn't share much about its inner workings. In the case of digivolution, it can be exhausting and time-consuming getting the same awful digimon over and over again.</p>
-                <p>This tool was created to help make the experience of playing the game a little bit more enjoyable, whilst retaining the fun and excitement amount of surprise of getting a new digimon.</p>
+                <p>This tool was created to help make the experience of playing the game a little bit more enjoyable, whilst retaining the fun and excitement of getting a new, unknown digimon.</p>
                 <h2>How?</h2>
                 <ul>
                     <li>
