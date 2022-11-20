@@ -2,7 +2,7 @@
 
 A tool for giving you a random (spoiler-free) digimon to evolve into.
 
-https://jackphilippi.com.au/digislots
+https://digislots.fippi.io
 
 ### `npm start`
 Runs the app in the development mode.\
