@@ -27,8 +27,7 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test",
-    "eject": "react-scripts --openssl-legacy-provider eject",
-    "move": "rm -rf ../jackphilippi.github.io/digislots/* && cp -R build/* ../jackphilippi.github.io/digislots/"
+    "eject": "react-scripts --openssl-legacy-provider eject"
   },
   "eslintConfig": {
     "extends": [
