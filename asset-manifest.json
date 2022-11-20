@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/digislots/static/css/main.17d1e563.chunk.css",
+    "main.js": "/digislots/static/js/main.fc653956.chunk.js",
+    "main.js.map": "/digislots/static/js/main.fc653956.chunk.js.map",
+    "runtime-main.js": "/digislots/static/js/runtime-main.9e707ccf.js",
+    "runtime-main.js.map": "/digislots/static/js/runtime-main.9e707ccf.js.map",
+    "static/css/2.d06613e6.chunk.css": "/digislots/static/css/2.d06613e6.chunk.css",
+    "static/js/2.3fd07b91.chunk.js": "/digislots/static/js/2.3fd07b91.chunk.js",
+    "static/js/2.3fd07b91.chunk.js.map": "/digislots/static/js/2.3fd07b91.chunk.js.map",
+    "index.html": "/digislots/index.html",
+    "static/css/2.d06613e6.chunk.css.map": "/digislots/static/css/2.d06613e6.chunk.css.map",
+    "static/css/main.17d1e563.chunk.css.map": "/digislots/static/css/main.17d1e563.chunk.css.map",
+    "static/js/2.3fd07b91.chunk.js.LICENSE.txt": "/digislots/static/js/2.3fd07b91.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e707ccf.js",
+    "static/css/2.d06613e6.chunk.css",
+    "static/js/2.3fd07b91.chunk.js",
+    "static/css/main.17d1e563.chunk.css",
+    "static/js/main.fc653956.chunk.js"
+  ]
+}
