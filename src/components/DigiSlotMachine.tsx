@@ -128,8 +128,8 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                 <p>The following table shows the required attributes that your digimon needs to meet in order to digivolve into the selected digimon.</p>
                 <Table striped bordered hover>
                     <tbody>
-                        <tr className='table-secondary'><th style={{ width: '30%' }}>Name</th><td style={{ width: '70%' }}>{optShowSpoilers ? <>{rolledDigimon?.name} <StyledIcon src={`./imgs/${rolledDigimon.name}.png`}/></> : '???'}</td></tr>
-                        <tr className='table-secondary'><th>Type</th><td>{optShowSpoilers ? <>{Type[rolledDigimon?.type]} {getTypeIcon(rolledDigimon.type)}</> : '???'}</td></tr>
+                        <tr className='table-secondary'><th style={{ width: '30%' }}>Name</th><td style={{ width: '70%' }}>{optShowSpoilers ? <><StyledIcon src={`./imgs/${rolledDigimon.name}.png`}/> {rolledDigimon?.name}</> : '???'}</td></tr>
+                        <tr className='table-secondary'><th>Type</th><td>{optShowSpoilers ? <>{getTypeIcon(rolledDigimon.type)} {Type[rolledDigimon?.type]}</> : '???'}</td></tr>
                         <tr className='table-secondary'><th>Level</th><td>{Level[rolledDigimon.level] || '-'}</td></tr>
                         <tr className='table-info'><th>HP</th><td>{rolledDigimon.req.hp || '-'}</td></tr>
                         <tr className='table-info'><th>MP</th><td>{rolledDigimon.req.mp || '-'}</td></tr>
@@ -224,6 +224,6 @@ export default function DigiSlotMachine() {const [currentDigimon, setCurrentDigi
                 <p>In-depth information about evolution within Digimon World can be found <a href="https://gamefaqs.gamespot.com/ps/913684-digimon-world/faqs/73845"> here</a>, with thanks to <a href="https://twitter.com/sydmontague">SydMontague</a> for the research that made this tool possible</p>
             </InfoCard>}
         </StyledPane>
-        
     </StyledPanes>;
+
 }
