@@ -2,7 +2,7 @@
   "name": "digi-random-evolution-calc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jackphilippi.com.au/digislots",
+  "homepage": "https://fippi.io/digislots",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -22,6 +22,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test",
@@ -35,7 +37,8 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.15"
+    "@types/styled-components": "^5.1.15",
+    "gh-pages": "^4.0.0"
   },
   "browserslist": {
     "production": [
