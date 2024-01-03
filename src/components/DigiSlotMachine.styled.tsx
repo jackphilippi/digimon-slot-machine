@@ -54,7 +54,7 @@ export const StyledIcon = styled.img`
     width: 32px;
 `;
 
-export const InfoCard = styled(Card)`
+export const StyledCard = styled(Card)`
     margin-top: 30px;
 `;
 

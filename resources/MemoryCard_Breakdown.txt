@@ -1,0 +1,236 @@
+0x0000 - 0x007F   Title
+0x0080 - 0x01FF   Icon Frames 0-2
+0x0200 - 0x06FF   Game Data
+  0x0200 - 0x0203   is new game (if 0 it starts at Jijimon when loading)
+  0x0204 - 0x0207   Player Pos X
+  0x0208 - 0x020B   Player Pos Y
+  0x020C - 0x020F   Player Pos Z
+  0x0210 - 0x0213   Unknown
+  0x0214 - 0x0217   Partner Pos X
+  0x0218 - 0x021B   Partner Pos Y
+  0x021C - 0x021F   Partner Pos Z
+  0x0220 - 0x0223   Unknown
+  0x0224 - 0x03B3   Poop Table (100 entries)
+    0x04 byte each
+      0x00 Screen ID
+      0x01 Location X
+      0x02 Location Z
+      0x03 Size
+  0x03B4 - 0x03B7   Bits
+  0x03B8 - 0x03BB   Digimon Type
+  0x03BC - 0x03CB   Mastered Moves
+  0x03CC - 0x03CF   Game Frames and mirror (ticks in which game time passed)
+  0x03D0 - 0x03D7   Ingame Date (Year-Day-Hour-Minute), 2 byte each
+  0x03D8 - 0x03D9   Frame Count
+  0x03DA - 0x03DD   Playtime (Hour-Minute), 2 byte each
+  0x03E0 - 0x0463   Partner Values, stored in 0x138460
+    0x00  Condition Flags
+    0x04  Sleepy Hour
+    0x06  Sleepy Minute
+    0x08  Wakeup Hour
+    0x0A  Wakeup Minute
+    0x0C  Standard Awake Time
+    0x0E  Standard Sleep Time
+    0x10  Awake Time this day
+    0x12  Sickness Counter
+    0x14  Missed Sleep Hours(unused?)
+    0x16  Tiredness Sleep Timer
+    0x18  Poop Level
+    0x1A  Unknown
+    0x1C  Unknown
+    0x1E  Virus Bar
+    0x20  Pooping Timer
+    0x22  Tiredness
+    0x24  Unknown
+    0x26  Tiredness Hunger Timer
+    0x28  Discipline
+    0x2A  Happiness
+    0x2C  Unknown
+    0x2E  Unknown
+    0x30  Sickness Related?
+    0x32  Unknown
+    0x34  Area Effect Timer
+    0x36  Sickness Timer
+    0x38  Unknown
+    0x3A  Unknown
+    0x3C  Saturation
+    0x3E  Food Timer
+    0x40  Starvation Timer
+    0x42  Weight
+    0x44  Unknown
+    0x46  Unknown
+    0x48  Remaining Lifetime
+    0x4A  Age
+    0x4C  Training Boost Flag
+    0x4E  Training Boost Multiplier
+    0x50  Training Boost Timer
+    0x52  Care Mistakes
+    0x54  Battles
+    0x56  Unknown
+    0x58  Unknown
+    0x5A  Unknown
+    0x5C  Unknown
+    0x5E  Fish Caught
+    0x60  Unknown
+    0x62  Unknown
+    0x64  Unknown
+    0x66  Upgrade Counter HP
+    0x68  Upgrade Counter MP
+    0x6A  Upgrade Counter Offense
+    0x6C  Upgrade Counter Brains (Bugged)
+    0x6E  Upgrade Counter Defense
+    0x70  Upgrade Counter Speed
+    0x72  Upgrade Counter Brains (Unused)
+    0x74  Unknown
+    0x76  Sukamon Backup HP
+    0x78  Sukamon Backup MP
+    0x7A  Sukamon Backup Offense
+    0x7C  Sukamon Backup Defense
+    0x7E  Sukamon Backup Speed
+    0x80  Sukamon Backup Brains
+    0x82  Unknown
+  0x0464 - 0x0465   Merit Points
+  0x0466 - 0x0467   Started Battles
+  0x0468 - 0x0469   Run Aways
+  0x046A - 0x046B   Tournament Won
+  0x046C - 0x046D   Tournament Battles Won
+  0x046E - 0x046F   Tournament Lost
+  0x0470 - 0x048F   Digimon Stats
+    0x00 Offense
+    0x02 Defense
+    0x04 Speed
+    0x06 Brains
+    0x08 Tech Priorities
+    0x0C Techs Equipped
+    0x10 Max HP
+    0x12 Max MP
+    0x14 Current HP
+    0x16 Current MP
+    0x18 Unknown, stored in 0x1557F8
+  0x0490 - 0x060B   State Area, stored in 0x1BDED8 to 0x1BE053
+    0x0490 - 0x0495   Card Shop single cards in stop
+    0x0496 - 0x04E3   Recycle Shop, 78 times, 1 byte each
+      Restore
+      Sup. Restore
+      Off. Chip
+      Def. Chip
+      Brain Chip
+      Quick Chip
+      HP Chip
+      MP Chip
+      DV Chip A
+      DV Chip D
+      DV Chip E
+      Trn. manual
+      Enemy repel
+      Enemy bell
+      Deluxmushrm
+      Gold Acorn
+      Power fruit
+      Power Ice
+      Speed Leaf
+      Sage Fruit
+      Muscle Yam
+      Calm Berry
+      Digiseabass
+      Chain melon
+      Grey Claws
+      Fireball
+      Flamingwing
+      Iron Hoof
+      Mono Stone
+      Steel drill
+      Black Wing
+      Spike Club
+      Flamingmane
+      White Wing
+      Torn tatter
+      Electo ring
+      Rainbowhorn
+      Rainbowhorn
+      Rooster
+      Unihorn
+      Horn helmet
+      Scissor jaw
+      Fertilizer
+      Koga laws
+      Waterbottle
+      North Star
+      Red Shell
+      Hard Scale
+      Bluecrystal
+      Ice crystal
+      Hair grower
+      Sunglasses
+      Metal part
+      Fatal Bone
+      Cyber part
+      Mega Hand
+      Silver ball
+      Metal armor
+      Chainsaw
+      Small spear
+      X Bandage
+      Ray Gun
+      Gold banana
+      Mysty Egg
+      Red Ruby
+      Beetlepearl
+      Coral charm
+      Moon mirror
+      Blue Flute
+      old fishrod
+      Amazing rod
+      Leomonstone
+      Mansion key
+      Gear
+      Rain Plant
+      Steak
+      Frig Key
+      AS Decoder
+    0x04E4 - 0x0563   127 times Item Bank amount
+    0x0564 - 0x0584   Cards (66 times, 4-bit each)
+    0x0585 - 0x05E8   Trigger (800 times, 1 bit each)
+    0x05E9 - 0x060B   PStat 0-34, 1 byte each
+  0x060C - 0x0666   Inventory
+    0x060C  30 times Item IDs
+    0x062A  30 times Item Amounts
+    0x0648  30 times Item Names
+    0x0666  Inventory Size
+  0x0667 - 0x067A   Tamer Name
+  0x067B - 0x068E   Digimon Name
+  0x068F - 0x068F   Lives Left
+  0x0690 - 0x0690   Tamer Level
+  0x0691 - 0x0691   Raised
+  0x0692 - 0x0699   Unknown, stored in 0x15571D
+  0x069A - 0x069A   Current Screen
+  0x069B - 0x069B   Last Screen
+  0x069C - 0x069C   Current Entrance
+  0x069D - 0x069D   Last Entrance
+  0x069E - 0x06BB   Unknown, stored in 0x13D5B0
+  0x06BC - 0x06D9   Unknown, stored in 0x13D590
+  0x06DA - 0x06E0   Unknown, stored in 0x134D56 - 0x134D50 (stored reversed)
+    0x00  Tile Y
+    0x01  Tile X
+    0x02  Unknown
+    0x03  Unknown
+    0x04  Entrance Tile Y
+    0x05  Entrance Tile X
+    0x06  Unknown Timer
+  0x06E1 - 0x06E3   Unused?
+  0x06E4 - 0x06FB   Null
+  0x06FC - 0x6FFF   Checksum-32 of 0x0200 - 0x10FF, with checksum as 0 still
+0x0700 - 0x10FF   Registered Digimon 0-39
+  0x40 byte each
+    0x00 HP
+    0x02 MP
+    0x04 Offense
+    0x06 Defense
+    0x08 Speed
+    0x0A Brains
+    0x0C Discipline
+    0x0E Name
+    0x1C Digimon ID
+    0x1D Move 0-2
+    0x20 Empty?
+0x1100 - 0x1FFF   Mirrored 0x0200 - 0x10FF, double buffered game state
