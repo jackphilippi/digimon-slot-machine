@@ -10,7 +10,7 @@ export interface Options {
     showSpecialDigimon: boolean;
     showOmitTags: boolean;
     showInfoText: boolean;
-    showIrrelevant: boolean;
+    hideIrrelevant: boolean;
     showSpoilers: boolean;
 }
 
@@ -36,7 +36,7 @@ export default function DigiSlotMachine() {
         showSpecialDigimon: false,
         showOmitTags: false,
         showInfoText: true,
-        showIrrelevant: true,
+        hideIrrelevant: true,
         showSpoilers: false
     });
     
@@ -98,11 +98,11 @@ export default function DigiSlotMachine() {
 
         // TODO: Re-visit labels for battles and care
         if (randomDigi.req.battles > 0) {
-            setLabels({ ...labels, battle: randomDigi.req.minBattles ? '≤' : '≥' });
+            setLabels(prevLabels => ({ ...prevLabels, battle: randomDigi.req.minBattles ? '≤' : '≥' }));
         }
 
         if (randomDigi.req.care > 0) {
-            setLabels({ ...labels, care: randomDigi.req.minCare ? '≤' : '≥' });
+            setLabels(prevLabels => ({ ...prevLabels, care: randomDigi.req.minCare ? '≤' : '≥' }));
         }
 
         const tableElem = document.getElementById('table-heading');
@@ -134,17 +134,6 @@ export default function DigiSlotMachine() {
 
     // TODO: Hover over stats for details
     return <StyledPanes>
-        <StyledPane>
-            <h2 id="table-heading">Target Digivolution Criteria</h2>
-            <p>The following table shows the required attributes that your digimon needs to meet in order to digivolve into the selected digimon.</p>
-            {rolledDigimon
-                ? <RequirementsTable
-                    rolledDigimon={rolledDigimon}
-                    currentDigimon={currentDigimon}
-                    labels={labels}
-                    options={options} />
-                : <p className={'text-info'}>Click the Roll button to receive a random digimon's evolution targets</p>}
-        </StyledPane>
         <StyledPane>
             <h2>Your current Digimon: {currentDigimon && <StyledIcon src={`./imgs/${currentDigimon.name}.png`}/>}</h2>
             <StyledSelect name="evolutions" value={currentDigimon.name} onChange={(e: any) => setCurrentDigimon(getDigimon(e.target.value as unknown as DigimonName))}>
@@ -199,8 +188,8 @@ export default function DigiSlotMachine() {
                     defaultChecked={options.showInfoText}
                     id="irrel-switch"
                     label="Hide stats that aren't needed for evolution"
-                    value={options.showIrrelevant}
-                    onClick={() => toggleOption('showIrrelevant')}
+                    value={options.hideIrrelevant}
+                    onClick={() => toggleOption('hideIrrelevant')}
                 />
                 <hr/>
                 <FormCheck 
@@ -213,6 +202,18 @@ export default function DigiSlotMachine() {
                 />
             </Alert>}
             {options.showInfoText && <InfoCard />}
+        </StyledPane>
+        <StyledPane>
+            <h2 id="table-heading">Target Digivolution Criteria</h2>
+            <p>The following table shows the required attributes that your digimon needs to meet in order to digivolve into the selected digimon.</p>
+            {rolledDigimon
+                ? <RequirementsTable
+                    rolledDigimon={rolledDigimon}
+                    currentDigimon={currentDigimon}
+                    labels={labels}
+                    options={options} />
+                : <p className={'text-info'}>Click the "Roll" button to receive a random digimon's evolution requirements</p>}
+            
         </StyledPane>
     </StyledPanes>;
 

@@ -12,9 +12,20 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### TODO
-1. Allow selected options to be persistent (using localStorage)
-2. Add some general help tooltips
-3. Allow sorting of rows / hiding rows that aren't relevant attributes
+[ ] Allow selected options to be persistent (using localStorage)
+[x] Allow sorting of rows / hiding rows that aren't relevant attributes
+[ ] Add proper priorities calculation for some digimon (i.e. when criteria for multiple digimon are met)
+
+### Changelog
+v0.1.1
+Refactored codebase
+Introduced new flag to hide irrelevant stats for evolutions
+Flipped UI and updated help text
+
+v0.1.2
+Fixed issue where some digimon had the wrong bonus digimon criteria listed (Airdramon)
+Fixed option flag for showing irrelevant stats
+Added hover tooltips to all stats
 
 ### Contributing
 If you'd like to contribute features to the codebase, feel free to open a pull request. 

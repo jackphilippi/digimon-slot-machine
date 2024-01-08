@@ -8,3 +8,7 @@ body {
 th {
   text-align: left;
 }
+
+tr.table-primary > th, tr.table-info > th, tr.table-warning > th, tr.table-danger > th {
+  cursor: help;
+}

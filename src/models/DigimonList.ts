@@ -74,7 +74,8 @@ export const digimonList = [
         Level.Rookie,
         Type.Vaccine,
         new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 3, 20, 0, 50, 0, 28, false, false), 
-        [DigimonName.Greymon, DigimonName.Meramon, DigimonName.Birdramon, DigimonName.Centarumon, DigimonName.Monochromon, DigimonName.Tyrannomon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon]
+        [DigimonName.Greymon, DigimonName.Meramon, DigimonName.Birdramon, DigimonName.Centarumon, DigimonName.Monochromon, DigimonName.Tyrannomon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
+        /* Bonus */ DigimonName.Koromon
     ),
     // Betamon
     new Digimon(
@@ -154,7 +155,6 @@ export const digimonList = [
         Type.Vaccine,
         new EvolutionRequirements(10, 10, 1, 0, 0, 0, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Megadramon, DigimonName.Phoenixmon, DigimonName.Vademon, DigimonName.Sukamon],
-        /* Bonus */ DigimonName.Koromon
     ),
     // Angemon
     new Digimon(
@@ -162,7 +162,8 @@ export const digimonList = [
         Level.Champion,
         Type.Vaccine,
         new EvolutionRequirements(2000, 4000, 200, 400, 200, 400, 5, 40, 95, 0, 30, 30, true, false), 
-        [DigimonName.Andromon, DigimonName.Phoenixmon, DigimonName.Devimon, DigimonName.Vademon, DigimonName.Sukamon]
+        [DigimonName.Andromon, DigimonName.Phoenixmon, DigimonName.Devimon, DigimonName.Vademon, DigimonName.Sukamon],
+        /* Bonus */ DigimonName.Patamon
     ),
     // Bakemon
     new Digimon(
