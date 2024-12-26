@@ -73,7 +73,7 @@ export const digimonList = [
         DigimonName.Agumon,
         Level.Rookie,
         Type.Vaccine,
-        new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 3, 20, 0, 50, 0, 28, false, false), 
+        new EvolutionRequirements(10, 10, 1, 0, 0, 0, 0, 15, 0, 0, 0, 0, false, false), 
         [DigimonName.Greymon, DigimonName.Meramon, DigimonName.Birdramon, DigimonName.Centarumon, DigimonName.Monochromon, DigimonName.Tyrannomon, DigimonName.Numemon, DigimonName.Nanimon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Koromon
     ),
@@ -153,7 +153,7 @@ export const digimonList = [
         DigimonName.Airdramon,
         Level.Champion,
         Type.Vaccine,
-        new EvolutionRequirements(10, 10, 1, 0, 0, 0, 0, 15, 0, 0, 0, 0, false, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 100, 100, 1, 30, 90, 0, 0, 35, true, false), 
         [DigimonName.Megadramon, DigimonName.Phoenixmon, DigimonName.Vademon, DigimonName.Sukamon],
     ),
     // Angemon
@@ -161,7 +161,7 @@ export const digimonList = [
         DigimonName.Angemon,
         Level.Champion,
         Type.Vaccine,
-        new EvolutionRequirements(2000, 4000, 200, 400, 200, 400, 5, 40, 95, 0, 30, 30, true, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 0, 100, 0, 20, 0, 0, 0, 35, true, false), 
         [DigimonName.Andromon, DigimonName.Phoenixmon, DigimonName.Devimon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Patamon
     ),
@@ -170,7 +170,7 @@ export const digimonList = [
         DigimonName.Bakemon,
         Level.Champion,
         Type.Virus,
-        new EvolutionRequirements(0, 1000, 0, 0, 0, 100, 0, 20, 0, 0, 0, 35, true, false), 
+        new EvolutionRequirements(0, 1000, 0, 0, 0, 0, 3, 20, 0, 50, 0, 28, false, false), 
         [DigimonName.SkullGreymon, DigimonName.Giromon, DigimonName.Vademon, DigimonName.Sukamon],
         /* Bonus */ DigimonName.Patamon
     ),
@@ -393,7 +393,7 @@ export const digimonList = [
         DigimonName.Andromon,
         Level.Ultimate,
         Type.Vaccine,
-        new EvolutionRequirements(0, 1000, 0, 0, 100, 100, 1, 30, 90, 0, 0, 35, true, false), 
+        new EvolutionRequirements(2000, 4000, 200, 400, 200, 400, 5, 40, 95, 0, 30, 30, true, false), 
         [DigimonName.Sukamon]
     ),
     // Digitamamon

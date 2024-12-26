@@ -137,7 +137,7 @@ export default function DigiSlotMachine() {
         <StyledPane>
             <h2>Your current Digimon: {currentDigimon && <StyledIcon src={`./imgs/${currentDigimon.name}.png`}/>}</h2>
             <StyledSelect name="evolutions" value={currentDigimon.name} onChange={(e: any) => setCurrentDigimon(getDigimon(e.target.value as unknown as DigimonName))}>
-                {digimonList.map(d => <option key={d.name} value={d.name}>{Level[d.level]} - {d.name}</option>)}
+                {digimonList.map(d => <option key={d.name} value={d.name}>{d.name} - {Level[d.level]}</option>)}
             </StyledSelect>
             <StyledButton variant="primary" onClick={() => rollDigimon(currentDigimon)}>Roll!</StyledButton> 
             {errorText && <p className='text-danger'>{errorText}</p>}
